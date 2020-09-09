@@ -1,7 +1,16 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
 //crear el servidor
 const app = express();
+
+//conectar a mongodb
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/veterinaria', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+});
 
 // puerto y arrancar servidor
 app.listen(4000, ()=> {
