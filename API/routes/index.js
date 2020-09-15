@@ -14,6 +14,11 @@ module.exports = function() {
   router.get('/pacientes',
     controlPaciente.obtenerPacientes
   )
+
+  // Obtiene paciente por medio de un ID
+  router.get('/pacientes/:id', 
+    controlPaciente.obtenerPaciente
+  )
   
 
   return router;
