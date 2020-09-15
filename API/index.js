@@ -8,7 +8,7 @@ const app = express();
 
 //conectar a mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/veterinaria', {
+mongoose.connect('mongodb+srv://root:root@cluster0.cdjfn.mongodb.net/veterinaria?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
